@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concord BETA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js" integrity="sha512-iZIBSs+gDyTH0ZhUem9eQ1t4DcEn2B9lHxfRMeGQhyNdSUz+rb+5A3ummX6DQTOIs1XK0gOteOg/LPtSo9VJ+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <header>
+        <!-- DIV PARA CONTROLAR O USERNAME E MOSTRAR NOME DO USUARIO-->
+        <div class="user-controller">
+            <p id="username-label"></p>
+            <div id="username-div">
+                <input type="text" id="username">
+                <button class="username-btn" onclick="changeUsername()">Mudar Nome</button>
+            </div>
+        </div>
+
+        <div class="controller">
+            <button class="control-btn disable-btn" onclick="toggleMicrophone(this)">Ativar microfone</button>
+            <button class="control-btn disable-btn" onclick="toggleMute(this)">Mute</button>
+            <button class="control-btn disable-btn" onclick="toggleConnection(this)">Go online</button>
+        </div>
+    </header>
+
+    <h2>users list</h2>
+    <ul class="users" id="users">
+
+    </ul>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
